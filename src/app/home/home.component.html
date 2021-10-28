@@ -1,14 +1,16 @@
-<mat-toolbar color="primary">
-  <!-- <button
+<div class="body">
+  <mat-toolbar color="primary">
+    <!-- <button
     mat-icon-button
     class="example-icon"
     aria-label="Example icon-button with menu icon"
   >
     <mat-icon>menu</mat-icon>
   </button> -->
-  <span>Chip Game</span>
-  <span class="example-spacer"></span>
-  <!-- <button
+    <img class="logo" src="assets/chip.png" alt="" />
+    <!-- <span>Game</span> -->
+    <!-- <span class="example-spacer"></span> -->
+    <!-- <button
     mat-icon-button
     class="example-icon favorite-icon"
     aria-label="Example icon-button with heart icon"
@@ -22,62 +24,62 @@
   >
     <mat-icon>share</mat-icon>
   </button> -->
-</mat-toolbar>
+  </mat-toolbar>
 
-<div class="inst">
-  <mat-accordion>
-    <mat-expansion-panel
-      (opened)="panelOpenState = true"
-      (closed)="panelOpenState = false"
-    >
-      <mat-expansion-panel-header>
-        <mat-panel-title>Instructions</mat-panel-title>
-        <!-- <mat-panel-description>
-        </mat-panel-description> -->
-      </mat-expansion-panel-header>
-      <p>
-        Hi, find the word <Strong>Chip</Strong> hidden behind the images below.
-        Out of 10 chances; 3 or more correct picks wins. 1 point for every
-        correct pick. Good luck!
-      </p>
-    </mat-expansion-panel>
-  </mat-accordion>
-</div>
+  <div class="inst">
+    <mat-accordion>
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>Instructions</mat-panel-title>
+          <!-- <mat-panel-description>
+          </mat-panel-description> -->
+        </mat-expansion-panel-header>
+        <p>
+          Hi, find the hidden Chip behind the images below. Out of 10 chances; 3
+          or more correct picks wins. 1 point for every correct pick. Good luck!
+        </p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 
-<!-- <div class="card">
-  <mat-card><img src="../../assets/unknown.png" alt="" /></mat-card>
-  <mat-card><img src="../../assets/unknown.png" alt="" /></mat-card>
-  <mat-card><img src="../../assets/unknown.png" alt="" /></mat-card>
-  <mat-card><img src="../../assets/unknown.png" alt="" /></mat-card>
-</div> -->
+  <!-- <div class="card">
+    <mat-card><img src="../../assets/unknown.png" alt="" /></mat-card>
+    <mat-card><img src="../../assets/unknown.png" alt="" /></mat-card>
+    <mat-card><img src="../../assets/unknown.png" alt="" /></mat-card>
+    <mat-card><img src="../../assets/unknown.png" alt="" /></mat-card>
+  </div> -->
 
-<div class="card">
-  <div (click)="onClick(1)">
-    <img *ngIf="image1" src="assets/unknown1.png" alt="" />
-    <p *ngIf="p1">Chip</p>
+  <div class="card">
+    <div (click)="onClick(1)">
+      <img *ngIf="image1" src="assets/unknown1.png" alt="" />
+      <img *ngIf="p1" src="assets/chip.png" />
+    </div>
+    <div (click)="onClick(2)">
+      <img *ngIf="image2" src="assets/unknown1.png" alt="" />
+      <img *ngIf="p2" src="assets/chip.png" />
+    </div>
+    <div (click)="onClick(3)">
+      <img *ngIf="image3" src="assets/unknown1.png" alt="" />
+      <img *ngIf="p3" src="assets/chip.png" />
+    </div>
+    <div (click)="onClick(4)">
+      <img *ngIf="image4" src="assets/unknown1.png" alt="" />
+      <img *ngIf="p4" src="assets/chip.png" />
+    </div>
   </div>
-  <div (click)="onClick(2)">
-    <img *ngIf="image2" src="assets/unknown1.png" alt="" />
-    <p *ngIf="p2">Chip</p>
-  </div>
-  <div (click)="onClick(3)">
-    <img *ngIf="image3" src="assets/unknown1.png" alt="" />
-    <p *ngIf="p3">Chip</p>
-  </div>
-  <div (click)="onClick(4)">
-    <img *ngIf="image4" src="assets/unknown1.png" alt="" />
-    <p *ngIf="p4">Chip</p>
-  </div>
-</div>
 
-<div class="footer">
-  <div class="box">
-    <p>Score</p>
-    <span>{{ totalScore }}</span>
-  </div>
-  <button mat-raised-button (click)="resetGame()">Reset Game</button>
-  <div class="box">
-    <p>Chances</p>
-    <span>{{ chances }}</span>
+  <div class="footer">
+    <div class="box">
+      <p>Score</p>
+      <span>{{ totalScore }}</span>
+    </div>
+    <button mat-raised-button (click)="resetGame()">Reset Game</button>
+    <div class="box">
+      <p>Chances</p>
+      <span>{{ chances }}</span>
+    </div>
   </div>
 </div>
