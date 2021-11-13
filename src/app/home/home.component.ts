@@ -74,7 +74,7 @@ export class HomeComponent {
     }
 
     if (this.chances == 0) {
-      let isWon = this.totalScore > 2;
+      let isWon = this.totalScore >= 6;
       let header: string;
       let content: string;
       if (isWon) {
